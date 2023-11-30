@@ -1,0 +1,23 @@
+# Source Files
+src/
+
+# TypeScript Configuration
+tsconfig.json
+
+# Test Files
+test/
+__tests__/
+*.test.ts
+*.spec.ts
+
+# Development-specific Files
+*.md
+!.npmignore
+!.gitignore
+node_modules/
+npm-debug.log
+
+# Editor-specific Settings
+.vscode/
+.idea/
+*.swp

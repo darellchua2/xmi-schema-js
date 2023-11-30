@@ -1,28 +1,20 @@
 {
-  "name": "xmi-schema",
+  "name": "xmi",
   "version": "0.0.1",
-  "description": "a schema used for built environment",
+  "description": "",
   "main": "dist/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rm -rf dist/ && prettier --write src/ && npm run build:esm && npm run build:esm",
+    "build:esm": "tsc -- outDir dist/types"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xmi-schema/xmi-schema-js.git"
   },
-  "keywords": [
-    "[\"xmi\"",
-    "\"schema\"",
-    "\"built",
-    "environment\"]"
-  ],
   "author": "Chua Khiong Kiat",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xmi-schema/xmi-schema-js/issues"
-  },
-  "homepage": "https://github.com/xmi-schema/xmi-schema-js#readme"
+  "license": "MIT"
 }
