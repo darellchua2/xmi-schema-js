@@ -51,4 +51,51 @@ export class XmiBaseEntity {
         this._entityType = value;
     }
 }
-// Optionally, you can also export other classes, functions, or constants from this file.
+export class XmiBaseRelationship {
+    constructor(source, target, name = null, entityType = "XmiRelBaseRelationship") {
+        if (!(source instanceof XmiBaseEntity)) {
+            throw new TypeError("'source' should be of type XmiBaseEntity");
+        }
+        if (!(target instanceof XmiBaseEntity)) {
+            throw new TypeError("'target' should be of type XmiBaseEntity");
+        }
+        this._source = source;
+        this._target = target;
+        this._name = name;
+        this._entityType = entityType;
+    }
+    // Getter and setter for source
+    get source() {
+        return this._source;
+    }
+    set source(source) {
+        if (!(source instanceof XmiBaseEntity)) {
+            throw new Error("Source must be of type XmiBaseEntity");
+        }
+        this._source = source;
+    }
+    // Getter and setter for target
+    get target() {
+        return this._target;
+    }
+    set target(target) {
+        if (!(target instanceof XmiBaseEntity)) {
+            throw new Error("Target must be of type XmiBaseEntity");
+        }
+        this._target = target;
+    }
+    // Getter and setter for name
+    get name() {
+        return this._name;
+    }
+    set name(name) {
+        this._name = name;
+    }
+    // Getter and setter for entity type
+    get entityType() {
+        return this._entityType;
+    }
+    set entityType(value) {
+        this._entityType = value;
+    }
+}

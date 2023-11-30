@@ -1,6 +1,6 @@
 {
   "name": "xmi-schema",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "babel src -d dist"
+    "build": "rm -rf ./dist/** && npx tsc",
+    "build-test": "rm -rf ./dist/** && npx tsc && npm run test"
   },
   "repository": {
     "type": "git",

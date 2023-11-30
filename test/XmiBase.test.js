@@ -1,4 +1,4 @@
-import { XmiBaseEntity } from "xmi-schema";
+import { XmiBaseEntity, XmiBaseRelationship } from "xmi-schema";
 
 describe("XmiBaseEntity Tests", () => {
   it("should create an entity with default values", () => {
@@ -27,6 +27,18 @@ describe("XmiBaseEntity Tests", () => {
 
     expect(entity.id).toBe("1234");
     // ... other default value tests
+  });
+
+  // Add more tests for setters, getters, and other methods
+});
+
+describe("XmiBaseRelationship Tests", () => {
+  it("should create an entity with default values", () => {
+    const entity1 = new XmiBaseEntity();
+    const entity2 = new XmiBaseEntity();
+    const relationship = new XmiBaseRelationship(entity1, entity2);
+    expect(relationship.source).toBe(entity1);
+    expect(relationship.target).toBe(entity2);
   });
 
   // Add more tests for setters, getters, and other methods

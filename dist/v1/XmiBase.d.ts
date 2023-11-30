@@ -28,3 +28,18 @@ export declare class XmiBaseEntity {
     get entityType(): string;
     set entityType(value: string);
 }
+export declare class XmiBaseRelationship {
+    private _source;
+    private _target;
+    private _name;
+    private _entityType;
+    constructor(source: XmiBaseEntity, target: XmiBaseEntity, name?: string | null, entityType?: string);
+    get source(): XmiBaseEntity;
+    set source(source: XmiBaseEntity);
+    get target(): XmiBaseEntity;
+    set target(target: XmiBaseEntity);
+    get name(): string | null;
+    set name(name: string);
+    get entityType(): string;
+    set entityType(value: string);
+}
