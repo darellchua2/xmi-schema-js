@@ -21,5 +21,13 @@ describe("XmiBaseEntity Tests", () => {
     // ... other default value tests
   });
 
+  it("Test with empty class then set it", () => {
+    const entity = new XmiBaseEntity();
+    entity.id = "1234";
+
+    expect(entity.id).toBe("1234");
+    // ... other default value tests
+  });
+
   // Add more tests for setters, getters, and other methods
 });
