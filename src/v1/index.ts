@@ -1,0 +1,1 @@
+export { XmiBaseEntity } from "./XmiBaseEntity";
