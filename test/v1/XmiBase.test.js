@@ -8,7 +8,8 @@ describe("XmiBaseEntity Tests", () => {
       /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
     expect(uuidRegex.test(entity._id)).toBeTruthy();
     expect(entity._entityType).toBe("XmiBaseEntity");
-    expect(entity._name).toBeNull();
+    expect(typeof entity._name).toBe("string");
+    expect(entity.name).toBe(entity.id);
     // ... other default value tests
   });
 

@@ -16,7 +16,7 @@ export declare class XmiBaseEntity {
      * @param description A brief description of the entity.
      * @param entityType The type of the entity.
      */
-    constructor(id?: string | null, name?: string | null, ifcguid?: string | null, description?: string | null, entityType?: string);
+    constructor(id?: string | undefined | null, name?: string | undefined | null, ifcguid?: string | undefined | null, description?: string | undefined | null, entityType?: string);
     get id(): string | null;
     set id(value: string | null);
     get name(): string | null;

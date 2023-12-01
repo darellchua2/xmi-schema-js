@@ -20,14 +20,14 @@ export class XmiBaseEntity {
    * @param entityType The type of the entity.
    */
   constructor(
-    id: string | null = null,
-    name: string | null = null,
-    ifcguid: string | null = null,
-    description: string | null = null,
+    id: string | undefined | null = null,
+    name: string | undefined | null = null,
+    ifcguid: string | undefined | null = null,
+    description: string | undefined | null = null,
     entityType: string = "XmiBaseEntity"
   ) {
     this._id = id || uuidv4();
-    this._name = name;
+    this._name = name || this._id;
     this._ifcguid = ifcguid;
     this._description = description;
     this._entityType = entityType;

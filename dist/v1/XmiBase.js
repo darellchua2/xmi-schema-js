@@ -14,7 +14,7 @@ export class XmiBaseEntity {
      */
     constructor(id = null, name = null, ifcguid = null, description = null, entityType = "XmiBaseEntity") {
         this._id = id || uuidv4();
-        this._name = name;
+        this._name = name || this._id;
         this._ifcguid = ifcguid;
         this._description = description;
         this._entityType = entityType;

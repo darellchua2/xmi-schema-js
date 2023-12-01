@@ -7,8 +7,9 @@
       "name": "Debug Jest Tests",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
       "args": ["--runInBand", "test/"], // Specifies the test directory
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "openOnSessionStart"
+      "console": "internalConsole", // Change this line
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std"
     }
   ]
 }

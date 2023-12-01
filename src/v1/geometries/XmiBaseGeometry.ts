@@ -6,9 +6,10 @@ export class XmiBaseGeometry extends XmiBaseEntity {
     id: string | null = null,
     name: string | null = null,
     ifcguid: string | null = null,
-    description: string | null = null
+    description: string | null = null,
+    entityType: string = "XmiBaseGeometry"
   ) {
-    super(id, name, ifcguid, description, "XmiBaseGeometry");
+    super(id, name, ifcguid, description, entityType);
   }
 
   // Inherits getters and setters from XmiBaseEntity

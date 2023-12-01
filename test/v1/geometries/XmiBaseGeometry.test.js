@@ -4,10 +4,12 @@ describe("XmiBaseGeometry Tests", () => {
   it("should create an entity with default values", () => {
     const entity = new XmiBaseGeometry();
     expect(entity._entityType).toBe("XmiBaseGeometry");
-    expect(entity._name).toBeNull();
+    expect(typeof entity._name).toBe("string");
+    expect(entity.name).toBe(entity.id);
     const uuidRegex =
       /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
     expect(uuidRegex.test(entity._id)).toBeTruthy();
+    expect(uuidRegex.test(entity.id)).toBeTruthy();
     // ... other default value tests
   });
   // Add more tests for setters, getters, and other methods
