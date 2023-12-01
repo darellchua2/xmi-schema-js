@@ -10,6 +10,23 @@
       "console": "internalConsole", // Change this line
       "internalConsoleOptions": "openOnSessionStart",
       "outputCapture": "std"
+    },
+    {
+      "name": "Build",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/typescript/bin/tsc",
+      "args": ["-p", "${workspaceFolder}/tsconfig.json"],
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "preLaunchTask": "cleanDist"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Build then Debug Jest Tests",
+      "configurations": ["Build", "Debug Jest Tests"]
     }
   ]
 }

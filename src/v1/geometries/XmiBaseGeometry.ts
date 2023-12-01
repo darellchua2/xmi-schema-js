@@ -3,10 +3,10 @@ import { XmiBaseEntity } from "../XmiBase";
 export class XmiBaseGeometry extends XmiBaseEntity {
   // TypeScript uses a constructor for initialization
   constructor(
-    id: string | null = null,
-    name: string | null = null,
-    ifcguid: string | null = null,
-    description: string | null = null,
+    id: string | null | undefined = null,
+    name: string | null | undefined = null,
+    ifcguid: string | null | undefined = null,
+    description: string | null | undefined = null,
     entityType: string = "XmiBaseGeometry"
   ) {
     super(id, name, ifcguid, description, entityType);
