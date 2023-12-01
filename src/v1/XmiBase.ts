@@ -1,4 +1,4 @@
-// XmiBaseEntity.ts
+import { v4 as uuidv4 } from "uuid";
 
 /**
  * The XmiBaseEntity class serves as a base class for various entities in the library.
@@ -26,7 +26,7 @@ export class XmiBaseEntity {
     description: string | null = null,
     entityType: string = "XmiBaseEntity"
   ) {
-    this._id = id;
+    this._id = id || uuidv4();
     this._name = name;
     this._ifcguid = ifcguid;
     this._description = description;

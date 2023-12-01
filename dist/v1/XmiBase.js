@@ -1,4 +1,4 @@
-// XmiBaseEntity.ts
+import { v4 as uuidv4 } from "uuid";
 /**
  * The XmiBaseEntity class serves as a base class for various entities in the library.
  * It includes basic properties like id, name, ifcguid, description, and entityType.
@@ -13,7 +13,7 @@ export class XmiBaseEntity {
      * @param entityType The type of the entity.
      */
     constructor(id = null, name = null, ifcguid = null, description = null, entityType = "XmiBaseEntity") {
-        this._id = id;
+        this._id = id || uuidv4();
         this._name = name;
         this._ifcguid = ifcguid;
         this._description = description;

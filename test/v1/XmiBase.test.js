@@ -3,7 +3,11 @@ import { XmiBaseEntity, XmiBaseRelationship } from "xmi-schema";
 describe("XmiBaseEntity Tests", () => {
   it("should create an entity with default values", () => {
     const entity = new XmiBaseEntity();
-    expect(entity._id).toBeNull();
+    // Regular expression to validate UUID v4
+    const uuidRegex =
+      /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    expect(uuidRegex.test(entity._id)).toBeTruthy();
+    expect(entity._entityType).toBe("XmiBaseEntity");
     expect(entity._name).toBeNull();
     // ... other default value tests
   });
